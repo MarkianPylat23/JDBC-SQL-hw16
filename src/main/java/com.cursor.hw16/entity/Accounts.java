@@ -84,11 +84,11 @@ public class Accounts {
     public String toString() {
         return "Accounts{" +
                 "id=" + id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", city='" + city + '\'' +
-                ", gender='" + gender + '\'' +
-                ", username='" + username + '\'' +
+                ", first_name='" + first_name.replaceAll("\\s+", " ") + '\'' +
+                ", last_name='" + last_name.replaceAll("\\s+", " ")  + '\'' +
+                ", city='" + city.replaceAll("\\s+", " ")  + '\'' +
+                ", gender='" + gender.replaceAll("\\s+", " ")  + '\'' +
+                ", username='" + username.replaceAll("\\s+", " ")  + '\'' +
                 '}';
     }
 }

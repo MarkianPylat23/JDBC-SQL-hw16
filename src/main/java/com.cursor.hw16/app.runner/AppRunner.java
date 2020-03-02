@@ -18,13 +18,13 @@ public class AppRunner {
     public void runApp() {
 
         try {
-            findAccountById(11);
-            findProfileById(11);
+            showAllAccounts();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
     private void addAccountToTable(int id, String firstName, String lastName, String city, String gender, String username) {
 
         accounts.setId(id);
@@ -79,7 +79,7 @@ public class AppRunner {
         profilesService.addProfiles(profiles);
     }
 
-    private void showAllProfiles() {
+    private void showAllProfiles() throws SQLException{
 
         List<Profile> profilesList = profilesService.getAllProfiles();
 

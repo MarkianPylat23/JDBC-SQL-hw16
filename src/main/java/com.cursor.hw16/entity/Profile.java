@@ -84,11 +84,11 @@ public class Profile {
     public String toString() {
         return "Profile{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
-                ", job_title='" + job_title + '\'' +
-                ", department='" + department + '\'' +
-                ", company='" + company + '\'' +
-                ", skill='" + skill + '\'' +
+                ", username='" + username.replaceAll("\\s+", " ")  + '\'' +
+                ", job_title='" + job_title.replaceAll("\\s+", " ")  + '\'' +
+                ", department='" + department.replaceAll("\\s+", " ")  + '\'' +
+                ", company='" + company.replaceAll("\\s+", " ")  + '\'' +
+                ", skill='" + skill.replaceAll("\\s+", " ")  + '\'' +
                 '}';
     }
 }

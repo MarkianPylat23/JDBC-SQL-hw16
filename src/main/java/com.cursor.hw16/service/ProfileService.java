@@ -19,19 +19,19 @@ public class ProfileService extends Util implements ProfileModel {
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
-                preparedStatement.setInt(1, profile.getId());
-                preparedStatement.setString(2, profile.getUsername());
-                preparedStatement.setString(3, profile.getJob_title());
-                preparedStatement.setString(4, profile.getDepartment());
-                preparedStatement.setString(5, profile.getCompany());
-                preparedStatement.setString(6, profile.getSkill());
+            preparedStatement.setInt(1, profile.getId());
+            preparedStatement.setString(2, profile.getUsername());
+            preparedStatement.setString(3, profile.getJob_title());
+            preparedStatement.setString(4, profile.getDepartment());
+            preparedStatement.setString(5, profile.getCompany());
+            preparedStatement.setString(6, profile.getSkill());
 
-                preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
 
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+    }
 
     @Override
     public List<Profile> getAllProfiles() {
@@ -67,7 +67,7 @@ public class ProfileService extends Util implements ProfileModel {
 
         PreparedStatement preparedStatement = null;
 
-        String sql = "SELECT * FROM accounts WHERE id=?";
+        String sql = "SELECT * FROM profiles WHERE id=?";
 
         Profile profiles = new Profile();
 
